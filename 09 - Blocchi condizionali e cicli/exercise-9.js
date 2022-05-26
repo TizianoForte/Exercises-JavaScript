@@ -19,4 +19,5 @@ const person = {
 const keys = getKeys(person);
 console.log(keys);
 
+// output: ['firstName', 'lastName', 'age', 'city', 'job']
 
