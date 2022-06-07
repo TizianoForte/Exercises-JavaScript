@@ -1,6 +1,6 @@
 function greet(greeting) {
   return function greetWithPeople(name) {
-    console.log(`${greeting} ${name}`);
+  return `${greeting} ${name}`;
   };
 }
 

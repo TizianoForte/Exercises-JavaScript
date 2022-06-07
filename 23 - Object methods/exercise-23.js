@@ -10,7 +10,11 @@ const person = {
 
 Object.keys(person).forEach(key => {
   console.log(person[key]);
+  console.log(key)
+    
 });         
+
+
 
 //Output: Mario Rossi 25
 

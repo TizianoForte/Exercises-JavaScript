@@ -1,9 +1,7 @@
 function getKeys(obj) {
   let allKeys=[];
   for(let keypersons in obj){
-    if (Object.keys({ })){
-      allKeys.push(keypersons);
-    }
+   allKeys.push(keypersons);
     }
   return allKeys;
 }

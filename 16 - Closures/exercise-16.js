@@ -1,7 +1,7 @@
 function createStore() {
   let Store = [];
   return function addStore(product) {
-     Store.push(product.name);
+     Store.push(product);
       console.log(Store);
       return Store;
     }

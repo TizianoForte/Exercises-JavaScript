@@ -5,7 +5,7 @@ const person = {
   job: "Web Developer",
 };
 person.fullName = function () {
-  return `${this.firstName}`;
+  return `${this.firstName} `;
 };
 person.info = function () {
   return `${this.firstName} ${this.lastName} is ${this.age} - ${this.job}`;
