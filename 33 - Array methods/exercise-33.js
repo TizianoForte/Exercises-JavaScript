@@ -1,6 +1,6 @@
 function firstUncompletedNote(notes) {
   let firstUncompletedNote = notes.map(note => note.todos.find (notes => notes.done === false));   // effettuando il console.log mi risulta un undefined, ed i due risultati false.
- return firstUncompletedNote.filter(note => note !== undefined); // effettuando questa funzione mi risultano i due false.
+ return firstUncompletedNote.filter(note => note !== undefined); // effettuando questa funzione mi risultano i due false. 
 }
   
 const notes = [
