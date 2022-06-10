@@ -1,10 +1,12 @@
 function uncompletedNotes(notes) {
-return notes.map (note => note.todos.filter (notes => notes.done === false));
 
 
-}
 
-// Nell Output mi da un array [] vuoto.
+  
+
+
+
+
 
 const notes = [
   {
