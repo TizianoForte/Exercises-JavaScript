@@ -46,3 +46,4 @@ bankAccountVip.deposit(1200);
 bankAccountVip.withdraw(800);
 bankAccountVip.deposit(3500);
 bankAccountVip.view();
+
