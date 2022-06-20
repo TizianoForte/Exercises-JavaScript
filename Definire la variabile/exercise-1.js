@@ -12,3 +12,4 @@ function canPlay() {
 canPlay();
 
 //Risolto essendo block-scoped devono restare all'interno dello "scope" ovvero all'interno delle parantesi {}.
+

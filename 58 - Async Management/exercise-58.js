@@ -32,4 +32,4 @@ function fetchPersonById(id) {
 
 }
 
-fetchPersonById(3).then((person) => console.log(person)); //Uglae al 57 visto che li non richiedeva il reject error.
+fetchPersonById(3).then((person) => console.log(person)); //Uguale al 57 visto che li non richiedeva il reject error.
