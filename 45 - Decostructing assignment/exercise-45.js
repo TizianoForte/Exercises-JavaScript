@@ -4,15 +4,10 @@ const person = {
   lastName: 'Rossi',
   age: 25
 };
+const { id, firstName, lastName, age } = person;
 
 
- let {...rest } = person;
-
-const id = person.id;
-const firstName = person.firstName;
-const lastName = person.lastName;
-const age = person.age;
 
 console.log(id, firstName, lastName, age);
 
-//Output: dovrebbe essere correto.
+//Output: risolto.

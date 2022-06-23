@@ -61,7 +61,7 @@ function fetchPersonById(id) {
 
 
 
-  fetchPersonById(1)
+ fetchPersonById(1)
   .then (person => {
     console.log(person);
     return fetchJobById(1);
@@ -77,5 +77,4 @@ function fetchPersonById(id) {
 
 
 
-  
 
