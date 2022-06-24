@@ -5,11 +5,8 @@ const person = {
   age: 25
 };
 
-let {id, firstName, lastName, age}= person;
+Object.entries(person).forEach(([key, value]) =>
+  console.log(`${key}: ${value}`)
+);
 
-for (let value of Object.entries(person)) {
-  console.log(` ${value[1]}`);
-}
-
-
-//Output: dovrebbe essere corretto.
+//Output: ora dovrebbe essere corretto.
