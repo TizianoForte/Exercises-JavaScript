@@ -5,14 +5,5 @@ const person = {
   age: 25
 };
 
-const id = person.id;
-const personInfo = {
-  firstName: person.firstName,
-  lastName: person.lastName,
-  age: person.age
-};
-
-
-const personInfo2 = { ...person, id: 2 }; //dovrebbe funzionare.
-
-console.log(id, personInfo);
+const { id, ...personInfo } = person;
+console.log(id, personInfo); //Output: ora dovrebbe essere giusto.
