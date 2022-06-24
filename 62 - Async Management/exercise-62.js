@@ -49,4 +49,4 @@ fetchPersonById(1)
   .then((person) => console.log(person))
   .catch((err) => console.error(err));
 
-  //Output: Dovrebbe dare il risultato richiesto dall'esercizio.
+  //Output: Dovrebbe dare il risultato richiesto.
