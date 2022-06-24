@@ -34,52 +34,35 @@ const jobs = [
   }
 ];
 
-
-
-
-
-
-fetchJobById = (id) => {
-  setTimeout(() => {
-    const job = jobs.find(item => item.id === id);
-    if (job) {
-      return Promise.resolve(JSON.stringify(job));
-    }
-    return Promise.reject(`Job with id: ${id} doesn't exist`);
-  },500);
+function fetchPersonById(id) {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      const person = persons.find((item) => item.id === id);
+      if (person) {
+        resolve(person);
+      }
+      reject(new Error(`id ${id} non esiste`));
+    }, 1000);
+  });
 }
 
-
-
-fetchPersonById = (id) => {
-  setTimeout(() => {
-    const person = persons.find(item => item.id === id);
-    if (person) {
-      return Promise.resolve(JSON.stringify(person));
-    }
-    return Promise.reject(`Person with id: ${id} doesn't exist`);
-  }
-  , 1000);
+function fetchJobById(id) {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      const job = jobs.find((item) => item.id === id);
+      if (job) {
+        resolve(job);
+      }
+      reject(new Error(`id ${id} non esiste`));
+    }, 500);
+  });
 }
 
-
-
-async function allPromises(id) {
-  const person = await fetchPersonById(id);
-  const job = await fetchJobById(id);
-  return `${person} ${job}`;
+async function allPromise() {
+  const id = await fetchPersonById(1);
+  console.log(id);
+  const job = await fetchJobById(1);
+  console.log(job);
 }
 
-
-allPromises(1).then(result => {
-  console.log(result);
-}
-).catch(err => {
-  console.log(err);
-}
-);
-
-
-//Bisogna rivederlo, mi da undefined.
-
-
+allPromise(); //Dovrebbe essere corretto ora.
