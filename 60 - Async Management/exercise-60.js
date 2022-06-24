@@ -34,45 +34,27 @@ const jobs = [
   }
 ];
 
-function fetchPersonById(id) {
-  return new Promise((resolve, reject) => {
-    const person = persons.find(item => item.id === id);
+const fetchPersonById = (id) =>
+  new Promise((resolve) => {
+    let person = persons.find((person) => person.id === id);
+    if (person) {
+      resolve(person);
+    }
+  });
 
-      if (person) {
-        return resolve(JSON.stringify(person));
-      }
+const fetchJobById = (person) =>
+  new Promise((resolve) => {
+    let job = jobs.find((job) => job.id == person.id).jobTitle;
+    if (job) {
+      resolve(`${person.firstName} ${person.lastName}, ${job}`);
+    }
+  });
 
-      return reject(`Person with id: ${id} doesn't exist`);
-    });
-  };
+fetchPersonById(1)
+  .then((person) => fetchJobById(person))
+  .then((result) => console.log(result));
 
-  function fetchJobById(id) {
-    return new Promise((resolve, reject) => {
-      const job = jobs.find(item => item.id === id);
-      if (job) {
-        return resolve(JSON.stringify(job));
-      }
-      return reject(`Job with id: ${id} doesn't exist`);
-    });
-  }
-
-
-
-
-
-
- fetchPersonById(1)
-  .then (person => {
-    console.log(person);
-    return fetchJobById(1);
-})
-  .then (job => {
-    console.log(job);
-  })
-  .catch(error => console.log(error));
-
-
-  // Output : dovrebbe essere giusto, anche se bisogna indicare neccessariamente l'id in entrambe le funzioni. In automatico sarebbe perfetto penso....
+  // Output : ora dovrebbe funzionare.
 
 
 
