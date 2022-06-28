@@ -56,9 +56,5 @@ const fetchJobById = (person) =>
 
   // Output : ora dovrebbe funzionare.
 
-
- 
-  Promise.all([fetchPersonById(1),fetchJobById(person)]).then(values => {
-    console.log(values);
-  })
- 
+Promise.all([fetchPersonById(2), fetchJobById(persons[0])])
+.then((result) => console.log(result));// Non so se funziona bene
