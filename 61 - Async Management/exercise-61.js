@@ -58,11 +58,12 @@ function fetchJobById(id) {
   });
 }
 
-async function allPromise() {
+/*async function allPromise() {
   const id = await fetchPersonById(1);
   console.log(id);
   const job = await fetchJobById(1);
   console.log(job);
 }
 
-allPromise(); //Dovrebbe essere corretto ora.
+allPromise(); //Dovrebbe essere corretto ora.*/
+
