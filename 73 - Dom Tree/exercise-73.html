@@ -1,0 +1,39 @@
+<html>
+  <body>
+    <div id="container">
+      <h2>Person's List</h2>
+      <table id="person-table">
+        <tbody></tbody>
+      </table>
+      <button id="add-row">Add row</button>
+    </div>
+  </body>
+</html>
+
+<script>
+ const addRow =()=> {
+    const tBody = document.querySelector('tbody');
+    const tableRow = document.createElement('tr'); 
+    const tableFN = document.createElement('td');
+    const tableLN = document.createElement('td');
+    const tableAG = document.createElement('td');
+    tableFN.style.border = '1px solid red';
+    tableFN.style.padding = '10px 20px';
+    tableLN.style.border = '1px solid red';
+    tableLN.style.padding = '10px 20px';
+    tableAG.style.border = '1px solid red';
+    tableAG.style.padding = '10px 30px';
+    tableFN.textContent = 'Firstname';
+    tableLN.textContent = 'Lastname';
+    tableAG.textContent = 'Age';
+    tBody.append(tableRow);
+    tableRow.append(tableFN, tableLN, tableAG);
+  }
+
+  const button = document.getElementById('add-row').addEventListener('click', addRow);
+  // Funziona.... (Ho trovato su internet questi modi...)
+
+
+
+
+</script>
