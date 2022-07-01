@@ -51,6 +51,6 @@
   const button = document.querySelector('button[type="submit"]').addEventListener('click', submitPersonForm);
 
   const newEvent = new Event("loadedStatus")
-  window.addEventListener("loadedStatus", () => console.log("Person Form Loaded"));
+  window.addEventListener("loadedStatus", () => console.log("Person Form Loaded"))
   window.dispatchEvent(newEvent);//Penso sia questo quello richiesto dall'esercizio.
 </script>
