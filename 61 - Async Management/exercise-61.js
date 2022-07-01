@@ -58,12 +58,5 @@ function fetchJobById(id) {
   });
 }
 
-/*async function allPromise() {
-  const id = await fetchPersonById(1);
-  console.log(id);
-  const job = await fetchJobById(1);
-  console.log(job);
-}
 
-allPromise(); //Dovrebbe essere corretto ora.*/
-
+Promise.race([fetchPersonById(2), fetchJobById(1)]).then((result) => console.log(result));//Questo è il metodo che ho trovato.
