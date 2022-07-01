@@ -1,0 +1,32 @@
+<html>
+  <body>
+    <div id="container">
+      <h2>Hero's List</h2>
+      <ul class="hero-list">
+        <li class="hero-list-item">Batman</li>
+        <li class="hero-list-item">Superman</li>
+        <li class="hero-list-item">Spiderman</li>
+        <li class="hero-list-item">Hulk</li>
+        <li class="hero-list-item">Wolverine</li>
+      </ul>
+    </div>
+  </body>
+</html>
+
+<script>
+let selectedListItems = document.querySelectorAll(".hero-list-item");
+  console.log(selectedListItems);
+  selectedListItems.forEach((listElement) => {
+    listElement.addEventListener("mouseenter", () => listElement.style.backgroundColor = "red");
+    listElement.addEventListener("mouseleave", () => listElement.style.backgroundColor = "transparent");
+  })//Funziona, anche se la linea rossa occupa tutta la pagina. 
+
+
+
+
+
+
+
+
+
+</script>
